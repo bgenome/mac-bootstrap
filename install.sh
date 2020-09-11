@@ -34,7 +34,7 @@ do
 done
 
 # Install casks
-for cask in firefox google-chrome iterm2 docker corretto8 intellij-idea-ce visual-studio-code unity-hub unity spectacle slack zoomus gimp alfred love spotify anydesk vanilla vlc;
+for cask in firefox google-chrome iterm2 docker corretto8 intellij-idea-ce visual-studio-code unity-hub unity spectacle slack clickup zoomus gimp alfred love spotify anydesk vanilla vlc;
 do
   if ( brew cask info ${cask} | grep "Not installed" &>/dev/null ); then
     echo "Installing ${cask}"

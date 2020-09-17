@@ -82,7 +82,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "\$(pyenv init -)"
 fi
 export PYENV_ROOT="\$HOME/.pyenv"
-export PATH="\$PYENV_ROOT/bin:\$PATH
+export PATH="\$PYENV_ROOT/bin:\$PATH"
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 EOF

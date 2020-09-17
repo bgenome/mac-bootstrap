@@ -18,14 +18,8 @@ if [[ ! -x "/usr/local/bin/brew" ]]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
-# Install sqllite
-if [[ ! -d "/usr/local/Cellar/sqlite" ]]; then
-    echo "Installing sqlite"
-    brew install sqlite --with-function --with-secure-delete
-fi
-
 # Install packages
-for package in coreutils vim git zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting pyenv pyenv-virtualenvwrapper mas sfml;
+for package in sqlite coreutils vim git zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting pyenv pyenv-virtualenvwrapper mas sfml;
 do
   if [[ ! -d "/usr/local/Cellar/${package}" ]]; then
     echo "Installing ${package}"

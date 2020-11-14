@@ -19,7 +19,7 @@ if [[ ! -x "/usr/local/bin/brew" ]]; then
 fi
 
 # Install packages
-for package in sqlite coreutils vim git zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting pyenv pyenv-virtualenvwrapper mas sfml;
+for package in sqlite coreutils vim git zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting pyenv pyenv-virtualenv mas sfml;
 do
   if [[ ! -d "/usr/local/Cellar/${package}" ]]; then
     echo "Installing ${package}"
@@ -28,7 +28,7 @@ do
 done
 
 # Install casks
-for cask in firefox google-chrome iterm2 docker corretto8 intellij-idea-ce visual-studio-code unity-hub unity spectacle itsycal openemu slack zoomus whatsapp;
+for cask in firefox google-chrome iterm2 corretto8 intellij-idea-ce visual-studio-code spectacle openemu slack discord zoomus telegram;
 do
   if ( brew cask info ${cask} | grep "Not installed" &>/dev/null ); then
     echo "Installing ${cask}"
@@ -36,15 +36,11 @@ do
   fi
 done
 
-APPSTORE_APPS=( "462058435 Microsoft Excel (16.40)"
-"682658836 GarageBand (10.3.5)"
-"408981434 iMovie (10.1.15)"
-"409201541 Pages (10.1)"
-"497799835 Xcode (11.7)"
-"409183694 Keynote (10.1)"
-"462054704 Microsoft Word (16.40)"
-"462062816 Microsoft PowerPoint (16.40)"
-"409203825 Numbers (10.1)" )
+APPSTORE_APPS=(
+"462058435 Microsoft Excel (16.41)"
+"462054704 Microsoft Word (16.41)"
+"462062816 Microsoft PowerPoint (16.41)"
+)
 
 # Install from Mac App Store
 for app in ${APPSTORE_APPS[*]};
